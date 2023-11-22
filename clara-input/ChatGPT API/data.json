@@ -1,0 +1,9 @@
+{
+  "topics": [
+    {
+      "tag": "cinema",
+      "pattern": "I like the cinema.",
+      "followingTags": ["seat", "time"]
+    }
+  ]
+}
