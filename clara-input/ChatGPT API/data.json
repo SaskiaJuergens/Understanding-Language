@@ -1,9 +1,31 @@
 {
   "topics": [
     {
+      "tag": "weather",
+      "pattern": [
+        "It is raining.",
+        "I like cold weather",
+        "It is so hot today!"
+      ],
+      "followingTags": ["cinema", "time"]
+    },
+    {
       "tag": "cinema",
       "pattern": "I like the cinema.",
-      "followingTags": ["seat", "time"]
+      "followingTags": ["movieweather", "insideHobbies"]
+    },
+    {
+      "tag": "movieweather",
+      "pattern": [
+        "i love watching movies when it is dark and cold.",
+        "In wintertime i watch more movies"
+      ],
+      "followingTags": ["favouriteMovie", "Alita"]
+    },
+    {
+      "tag": "Alita",
+      "pattern": "I don't no the movie Alita. Tell me more!",
+      "followingTags": ["done"]
     }
   ]
 }
