@@ -1,0 +1,59 @@
+{
+  "topics": [
+    {
+      "tag": "work",
+      "pattern": [],
+      "followingTags": ["hobbies", "friends"]
+    },
+    {
+      "tag": "bad_weather",
+      "pattern": [],
+      "followingTags": ["Date", "hobbies"]
+    },
+    {
+      "tag": "hobbies",
+      "pattern": [],
+      "followingTags": ["friends", "Social Media"]
+    },
+    {
+      "tag": "friends",
+      "pattern": [],
+      "followingTags": ["Social Media", "cinema"]
+    },
+    {
+      "tag": "Date",
+      "pattern": [],
+      "followingTags": ["cinema", "movienight"]
+    },
+    {
+      "tag": "Social Media",
+      "pattern": [],
+      "followingTags": ["Science Fiction", "Computer"]
+    },
+    {
+      "tag": "computer",
+      "pattern": [],
+      "followingTags": ["Science Fiction", "movie"]
+    },
+    {
+      "tag": "Science Fiction",
+      "pattern": [],
+      "followingTags": ["Alita"]
+    },
+    {
+      "tag": "cinema",
+      "pattern": [],
+      "followingTags": ["Alita", "movie"]
+    },
+    {
+      "tag": "movie",
+      "pattern": [],
+      "followingTags": ["Alita", "KI"]
+    },
+    {
+      "tag": "Alita",
+      "pattern": [],
+      "followingTags": ["done"]
+    }
+  ]
+}
