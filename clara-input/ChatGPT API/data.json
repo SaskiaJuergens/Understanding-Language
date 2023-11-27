@@ -28,25 +28,25 @@
     {
       "tag": "Social Media",
       "pattern": [],
-      "followingTags": ["Ki", "Computer"]
+      "followingTags": ["Science Fiction", "Computer"]
     },
     {
       "tag": "computer",
       "pattern": [],
-      "followingTags": ["KI", "movienight"]
+      "followingTags": ["Science Fiction", "movie"]
     },
     {
-      "tag": "Ki",
+      "tag": "Science Fiction",
       "pattern": [],
       "followingTags": ["Alita"]
     },
     {
       "tag": "cinema",
       "pattern": [],
-      "followingTags": ["Alita", "movienight"]
+      "followingTags": ["Alita", "movie"]
     },
     {
-      "tag": "movienight",
+      "tag": "movie",
       "pattern": [],
       "followingTags": ["Alita", "KI"]
     },
