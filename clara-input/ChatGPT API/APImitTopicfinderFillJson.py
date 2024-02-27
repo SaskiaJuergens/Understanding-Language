@@ -5,7 +5,7 @@ import json
 openai.api_key = "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"
 
 # Load initial frameslot.json
-with open("frameslot.json", "r") as file:
+with open("frameSlots.json", "r") as file:
     frameslot_data = json.load(file)
 
 def initiate_chat(topic):
@@ -43,7 +43,7 @@ def CustomChatGPT(user_input):
     return ChatGPT_reply
 
 # Save the updated frameslot_data to frameslot.json
-with open("frameSlots.json", "w") as file:
+with open("frameslot.json", "w") as file:
     json.dump(frameslot_data, file, indent=2)
 
 # Gradio Interface

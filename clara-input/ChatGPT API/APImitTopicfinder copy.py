@@ -1,7 +1,7 @@
 import openai
 import gradio
 
-openai.api_key = "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"
+openai.api_key = ""
 
 def initiate_chat(topic):
     return [
