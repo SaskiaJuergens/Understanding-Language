@@ -2,7 +2,7 @@ import openai
 import gradio
 import json
 
-openai.api_key = "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"
+openai.api_key = ""
 
 # Laden Sie die ursprüngliche frameslot.json
 with open("ChatGPT API\\frameslot.json", "r") as file:

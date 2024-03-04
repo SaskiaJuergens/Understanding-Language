@@ -2,7 +2,7 @@
   "topics": [
     {
       "tag": "work",
-      "pattern": [
+      "patterns": [
         "What do you do for a living?",
         "No, I don't. I work too much to have time for one. How about you?",
         "I work a lot too. I'm a stay at home mom. What do you do for work?",
@@ -13,7 +13,7 @@
     },
     {
       "tag": "bad_weather",
-      "pattern": [
+      "patterns": [
         "Average temperature is [temperature] degrees and [precipitation] percent chance of rain",
         "[temperature] degrees [precipitation] chance of rain",
         "The temperature is estimated at [temperature] degrees Fahrenheit with a [precipitation] percent chance of rain.",
@@ -23,7 +23,7 @@
     },
     {
       "tag": "hobbies",
-      "pattern": [
+      "patterns": [
         "Jazz is great. I love listening to it while traveling. Do you travel much?",
         "I like to spend time with my family. I love spending time with them. What about you?",
         "i am a scientist. Do you have any of your hobbies?",
@@ -39,7 +39,7 @@
     },
     {
       "tag": "friends",
-      "pattern": [
+      "patterns": [
         "I like to play video games and hang out with my friends. Do you have any hobbies?",
         "It's always nice to have nice people in your life. They make the world a better place.",
         "Yes, they do. I wish I had more people in my life that cared about me.",
@@ -49,7 +49,7 @@
     },
     {
       "tag": "Date",
-      "pattern": [
+      "patterns": [
         "Pet Sematary is so good. What time can I watch it? My preferred date is March 8th.",
         "That sounds like a good idea. I am going to see a movie with my girlfriend this weekend.",
         "I would love to go to Paris someday and try some of their cuisine.",
@@ -62,7 +62,7 @@
     },
     {
       "tag": "Social Media",
-      "pattern": [
+      "patterns": [
         "What book do you have on Facebook?",
         "I work for facebook. It's a great company to work for. Do you like your job?",
         "You've taken up social media. ThereS's also a great place to look.",
@@ -75,7 +75,7 @@
     },
     {
       "tag": "computer",
-      "pattern": [
+      "patterns": [
         "I love to play video games and watch movies. What kind of music do you like to listen to?",
         "Yes, I have one. I have one. I like to play video games.",
         "I like to play video games. What about you? What do you like to do for fun?",
@@ -91,7 +91,7 @@
     },
     {
       "tag": "Science Fiction",
-      "pattern": [
+      "patterns": [
         "I love to read as well! What is your favorite genre of book? Mine is science fiction.",
         "I like science fiction and fantasy books. What is your favorite genre of books to read?",
         "Look for any Supernatural movies to watch a imax show.",
@@ -106,7 +106,7 @@
     },
     {
       "tag": "cinema",
-      "pattern": [
+      "patterns": [
         "How much is the ticket and where is this cinema located?",
         "Please check whether there are any regular show of Dramatic story in Vine Cinema?",
         "Please try to find any movie there at Livermore Cinema.",
@@ -120,7 +120,7 @@
     },
     {
       "tag": "movie",
-      "pattern": [
+      "patterns": [
         "I like playing video games as well. I also like to watch movies. What is your favorite genre?",
         "Are you interested in watching any movie?",
         "There are [count] movies you might like. If you like to watch [movie_name], you may like [movie_name], or [movie_name]. The movie has been released.",
@@ -135,7 +135,7 @@
     },
     {
       "tag": "Alita",
-      "pattern": [
+      "patterns": [
         "I discovered [count] films. What is your opinion about [movie_name], [movie_name], or [movie_name]?",
         "There are [count] films you may enjoy. Do you enjoy [title], [title], or [title]?",
         "My favorite genre is the anime anime. My favorite is that of the movie [title].",

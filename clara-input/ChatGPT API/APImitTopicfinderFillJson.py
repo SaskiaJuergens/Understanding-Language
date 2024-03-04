@@ -2,10 +2,10 @@ import openai
 import gradio
 import json
 
-openai.api_key = "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"
+openai.api_key = ""
 
 # Load initial frameslot.json
-with open("frameSlots.json", "r") as file:
+with open("ChatGPT API\\frameslot.json", "r") as file:
     frameslot_data = json.load(file)
 
 def initiate_chat(topic):
