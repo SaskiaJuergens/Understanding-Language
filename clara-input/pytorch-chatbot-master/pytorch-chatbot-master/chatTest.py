@@ -1,8 +1,3 @@
-## 04.03.24 
-## author: Clara Osterburg Correa
-## RobotTalkZone Concept 01 | feed forward learning, topic finde & openAI connection in addition
-## the code sends the hole conversation to openAI and a description of how to reply with the following topic
-
 import random
 import json
 import requests
@@ -40,20 +35,26 @@ openai.api_key = "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"  # OpenAI
 
 messages = []
 
-def chatbot(input_text):
-    global topic, messages
+print("Let's chat! (type 'quit' to exit)")
+input_counter = 0
 
-    if input_text.lower() == "quit":
+
+while True:
+    sentence = input("You: ")
+    
+    if sentence.lower() == "quit":
         messages = []  # Clear the messages list for a new conversation
-        return "Conversation ended."
+        break
 
     system_msg = f"you are a film critic with a select range of hobbies and interests. You enjoy talking to people. Make small talk."
     messages.append({"role": "system", "content": system_msg})
+    
+    input_counter += 1  # Increment the input counter
 
-   
+    if input_counter == 15:
+        topic = "Alita"  # Change the topic to Alita after 15 inputs
 
-   
-    sentence = tokenize(input_text)
+    sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
@@ -66,38 +67,39 @@ def chatbot(input_text):
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
 
-    if prob.item() > 0.5:
+    if prob.item() > 0.75:
         for topic_data in topics['topics']:
             if tag == topic_data["tag"]:
                 topic = random.choice(topic_data['followingTags'])
+                print(topic)
 
-                user_input = input_text
+        
+
+                user_input = sentence
                 messages.append({"role": "user", "content": str(user_input)})  # Ensure user_input is a string
                 response = openai.ChatCompletion.create(
                     model="gpt-3.5-turbo",
-                    messages=[{"role": "system", "content": f"{system_msg} Lead the topic from the current topic to {topic}!"}, {"role": "user", "content": str(user_input)}]
+                    messages=[{"role": "system", "content": f"{system_msg} Lead the topic form current topic to {topic}!"}, {"role": "user", "content": str(user_input)}]
                 )
                 reply = response["choices"][0]["message"]["content"]
                 messages.append({"role": "assistant", "content": reply})
+                print("\n" + reply + "\n")
 
-                # Return ChatGPT's response
-                return reply
+                # Print ChatGPT's response
 
     else:
         # Send order to ChatGPT API for the "else" case
         topic = "chose topic random"
+        print(topic)
 
-        user_input = input_text
+        user_input = sentence
         messages.append({"role": "user", "content": str(user_input)})  # Ensure user_input is a string
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
-            messages=[{"role": "system", "content": f"{system_msg} Lead the topic from the current topic to {topic}!"}, {"role": "user", "content": str(user_input)}]
+            messages=[{"role": "system", "content": f"{system_msg} Lead the topic form current topic to {topic}!"}, {"role": "user", "content": str(user_input)}]
         )
         reply = response["choices"][0]["message"]["content"]
         messages.append({"role": "assistant", "content": reply})
+        print("\n" + reply + "\n")
 
-        # Return ChatGPT's response for the "else" case
-        return reply
-
-iface = gradio.Interface(fn=chatbot, inputs="text", outputs="text", title = "RobotTalkZone")
-iface.launch()
+        # Print ChatGPT's response for the "else" case
